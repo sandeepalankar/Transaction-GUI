@@ -19,6 +19,12 @@ import javafx.stage.FileChooser;
 import javafx.stage.Window;
 import javafx.stage.FileChooser.ExtensionFilter;
 
+/**
+ * This class is the controller for the Transaction Manager GUI. It manages the interactions
+ * between the front end and the back end of the program.
+ * @author Graham Deubner, Sandeep Alankar
+ *
+ */
 public class MainController {
 
 	private static AccountDatabase database = null;
@@ -155,7 +161,7 @@ public class MainController {
 	}	
 
 	/**
-	 * This method makes sure that only one of the checkboxes can be selected at a time.
+	 * This method makes sure that only one of the check boxes can be selected at a time.
 	 */
 	@FXML
 	private void handleLoyalCustomer() {
@@ -501,8 +507,12 @@ public class MainController {
 	 */
 	private static void exportDatabase(String path, TextArea textArea) {
 		if(database == null) {
-			textArea.appendText("Database is empty!\n");
+			textArea.appendText("The database is empty\n");
 			return;
+		}
+		if(path.equals("")) {
+		    textArea.appendText("The given export path is invalid.\n");
+		    return;
 		}
 		if(!path.endsWith(".txt"))
 			path = path + ".txt";
@@ -523,6 +533,10 @@ public class MainController {
 	@FXML
 	void displayDatabase(ActionEvent event) {
 		atActionStart(textArea);
+		if(database == null) {
+		    textArea.appendText("The database is empty.\n");
+		    return;
+		}
 		if(noOrderRadioButton.isSelected())
 			textArea.appendText(database.printAccounts());
 		else if (dateOpenedRadioButton.isSelected())

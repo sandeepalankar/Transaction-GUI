@@ -48,19 +48,23 @@ public class Profile {
 	 * 
 	 * @return String representation of first name, space, last name
 	 */
-	@Override
-	public String toString() {
-		return fname + " " + lname;
-	}
+    @Override
+    public String toString() {
+        return fname + " " + lname;
+    }
 
-	/**
-	 * This method checks if the first and last name of the holder is the same as the passed in Profile 
-	 * object.
-	 * @param prof this parameter is contains the profile object that this profile object will be compaired to
-	 * @return true if two Profile first and last names are the same, false otherwise
-	 */ public boolean equals(Profile prof) {
-		 if(fname.equals(prof.getFName()) && lname.equals(prof.getLName()))
-			 return true;
-		 return false;
-	 }
+    /**
+     * This method checks if the first and last name of the holder is the same as
+     * the passed in Profile object.
+     * 
+     * @param prof this parameter is contains the profile object that this profile
+     *             object will be compared to
+     * @return true if two Profile first and last names are the same, false otherwise.
+     */
+    //@Override
+    public boolean equals(Profile prof) {
+        if (fname.equals(prof.getFName()) && lname.equals(prof.getLName()))
+            return true;
+        return false;
+    }
 }

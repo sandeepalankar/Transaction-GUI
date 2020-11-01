@@ -85,9 +85,9 @@ public class MoneyMarket extends Account{
     }
 
     /**
-     * returns 'm' indicating this Account is a MoneyMarket account
+     * returns 'M' indicating this Account is a MoneyMarket account
      * 
-     * @return returns the char 'm'
+     * @return returns the char 'M'
      */
     @Override
     public char getAccountType() {
@@ -104,7 +104,11 @@ public class MoneyMarket extends Account{
         withdrawals++;
     }  
      
-     @Override
+     /**
+      * This method returns the string value of the number of withdrawals made from the account.
+     *@return String Returns the string value of the number of withdrawals made from the account.
+     */
+    @Override
      public String getSpecialStringValue() {
          return String.valueOf(withdrawals);
      }

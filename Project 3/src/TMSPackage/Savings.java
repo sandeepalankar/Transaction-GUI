@@ -87,15 +87,19 @@ public class Savings extends Account{
     }
     
     /**
-     * returns 's' indicating this Account is a savings account
+     * returns 'S' indicating this Account is a savings account
      * 
-     * @return returns the char 's'
+     * @return returns the char 'S'
      */
     @Override
     public char getAccountType() {
         return 'S';
     }    
     
+    /**
+     * This method returns the boolean stored in isLoyal in string form.
+     *@return  String Returns "true" or "false".
+     */
     @Override
     public String getSpecialStringValue() {
         return String.valueOf(isLoyal);

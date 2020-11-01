@@ -37,7 +37,7 @@ public class Date implements Comparable<Date>{
      *@param date the date object which this date object will be compared to
      *@return returns 0 if equivalent, 1 if this Date comes after the passed Date Object, 
      *and -1 if this Date Object comes before the passed Date object.
-     */
+     */@Override
     public int compareTo(Date date) {
         if (this.year > date.year)
             return 1;
@@ -64,7 +64,7 @@ public class Date implements Comparable<Date>{
      *Method returns the date held by this object in string format: mm/dd/yyyy
      *
      *@return returns the string literal of the date
-     */
+     */@Override
     public String toString() {
         DecimalFormat df2char = new DecimalFormat("00");
         DecimalFormat df4char = new DecimalFormat("00");

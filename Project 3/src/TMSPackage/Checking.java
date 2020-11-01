@@ -80,14 +80,18 @@ public class Checking extends Account {
     }
 
     /**
-     * returns 'c' indicating this Account is a Checking account
-     * @return returns the char 'c'
+     * returns 'C' indicating this Account is a Checking account
+     * @return returns the char 'C'
      */
     @Override
     public char getAccountType() {
         return 'C';
     }    
     
+    /**
+     * This method returns the boolean stored in directDeposit in string form.
+     *@return  String Returns "true" or "false".
+     */
     @Override
     public String getSpecialStringValue() {
         return String.valueOf(directDeposit);

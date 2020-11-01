@@ -165,7 +165,6 @@ public class AccountDatabase {
         for (int i = 0; i < length - 1; i++) {
             int min_idx = i;
             for (int j = i + 1; j < length; j++) {
-                //System.out.println(" i:" + i + " j:" + j + " min_index:" + min_idx);
                 if (accounts[j].getDateOpen().compareTo( accounts[min_idx].getDateOpen()) < 0)
                     min_idx = j;
                 }  

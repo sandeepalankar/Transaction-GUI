@@ -259,7 +259,7 @@ Authors: Sandeep Alankar, Graham Deubner
 																<TextField fx:id="sumDepositeWithdrawTextField" alignment="CENTER_RIGHT" promptText="0.00" />
 															</children>
 														</VBox>
-														<Button fx:id="depositeWithdrawButton" mnemonicParsing="false" onAction="#depositeWithdrawSum" text="deposite/withdraw">
+														<Button fx:id="depositeWithdrawButton" mnemonicParsing="false" onAction="#depositeWithdrawSum" text="Execute">
 															<HBox.margin>
 																<Insets left="30.0" />
 															</HBox.margin>
@@ -366,7 +366,7 @@ Authors: Sandeep Alankar, Graham Deubner
 												</HBox>
 												<HBox alignment="CENTER" prefHeight="37.0" prefWidth="741.0">
 													<children>
-														<Button fx:id="importExportButton" mnemonicParsing="false" onAction="#importExportDatabase" text="Import/Export" />
+														<Button fx:id="importExportButton" mnemonicParsing="false" onAction="#importExportDatabase" text="Execute" />
 													</children>
 												</HBox>
 											</children>
